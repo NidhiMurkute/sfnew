@@ -1,25 +1,4 @@
-###
-# This file configures the SAP Cloud SDK Continuous Delivery pipeline of your project.
-# For a reference of the configuration concept and available options, please have a look into its documentation.
-#
-# The documentation for the most recent pipeline version can always be found at:
-#    https://github.com/SAP/cloud-s4-sdk-pipeline/blob/master/configuration.md
-# If you are using a fixed version of the pipeline, please make sure to view the corresponding version from the tag
-# list of GitHub (e.g. "v15" when you configured pipelineVersion = "v15" in the Jenkinsfile).
-#
-# For general information on how to get started with Continuous Delivery, visit:
-#    https://blogs.sap.com/2017/09/20/continuous-integration-and-delivery
-#
-# We aim to keep the pipeline configuration as stable as possible. However, major changes might also imply breaking
-# changes in the configuration. Before doing an update, please check the the release notes of all intermediate releases
-# and adapt this file if necessary.
-#
-# This is a YAML-file. YAML is a indentation-sensitive file format. Please make sure to properly indent changes to it.
-###
-
-
-
-### General project setup
+#Project Setup
 general:
   unsafeMode: false
   automaticVersioning: true
@@ -28,14 +7,12 @@ general:
   extensionRepository: 'https://github.com/SAP/cloud-s4-sdk-pipeline.git'
   productiveBranch: 'master'
 
-
-### Step-specific configuration
 steps:
   artifactSetVersion:
     commitVersion: false
     timestampTemplate: '%Y%m%d%H%M%S'
   executeNpm:
-    dockerImage: 'ppiper/node-browsers:v2'
+    dockerImage: 'ppiper/node-browsers:v2'  
   cloudFoundryDeploy:
     dockerImage: 'ppiper/cf-cli'
     mtaDeployParameters: '-f --version-rule ALL'
@@ -53,60 +30,57 @@ stages:
   npmAudit:
     auditedAdvisories:
     # high
-      - 550  
+      - 550   
       - 593
       - 1184
       - 755
-      - 1065
-      - 1164
-      - 1316
-      - 1324
-      - 1325
+      - 1065 
+      - 1164 
+      - 1316 
+      - 1324 
+      - 1325 
     # moderate
       - 535
-      - 1300
- 
+      - 1300 
+      
+#  backendIntegrationTests:
+ #   createHdiContainer: true
+  #  cloudFoundry:
+   #   org: 'referenceappscf'
+    #  space: 'SF_CAP'
+     # apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+      #credentialsId: 'cfdeployuser'
+
   lint:
     ui5BestPractices:
       failThreshold:
         error: 100
         warning: 500
         info: 1000
-
-
-productionDeployment:
+        
+  #endToEndTests:
+    #cfTargets:
+     # - org: 'referenceappscf'
+      #  space: 'SF_CAP'
+       # apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+        #credentialsId: 'cfdeployuser'
+    #appUrls:
+     # - url: 'https://referenceappscf-sf-cap-media-server-srv.cfapps.eu10.hana.ondemand.com'
+      #  credentialId: 'cfdeployuse. just tryingr'
+        
+  productionDeployment:
     cfTargets:
-      - org:  'SA0176014160_AutomationSubAccountDomain'
+      - org: 'SA0176014160_AutomationSubAccountDomain'
         space: 'Dev'
         appName: 'cloud-sf-extension-cap-sample'
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-        credentialsId: 'C5287080'
-
-
-  # This exclude is required for the example project to be successful in the pipeline
-  # Remove it when you have added your first test
-  s4SdkQualityChecks:
-    jacocoExcludes:
-      - '**/gen/**'
-      - '**/Application.class'
-
-#  npmAudit:
-#    auditedAdvisories:
-
-#  integrationTests:
-#    credentials:
-#      - alias: 'mySystemAlias'
-#        credentialId: 'mySystemCredentialsId'
-
-#  s4SdkQualityChecks:
-#    nonErpDestinations:
-#      - 'myCustomDestination'
-
-#  productionDeployment:
-#    cfTargets:
-#      - org: 'myOrg'
-#        space: 'mySpace'
-#        apiEndpoint: 'https://'
-#        appName: 'myAppName'
-#        manifest: 'manifest.yml'
-#        credentialsId: 'myDeploymentCredentialsId'
+        credentialsId: 'C5287080' 
+        
+   #tmsUpload:
+    #  - nodeName: 'devNode'
+     #   credentialsId: 'tms-sk'
+      #  customDescription: 'A custom description for the node upload'
+       #namedUser: 'Piper-Pipeline'
+        #mtaVersion: '*'
+        #stashContent:
+         # - 'buildResult' 
