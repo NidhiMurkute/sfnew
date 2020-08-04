@@ -21,7 +21,7 @@
 
 ### General project setup
 general:
-unsafeMode: false
+  unsafeMode: false
   automaticVersioning: true
   collectTelemetryData: false
   projectName: 'cloud-cap-s4ems-bp'
@@ -45,7 +45,7 @@ steps:
   sapNexusUploadArtifacts:
     packaging: 'mtar'
     buildDescriptorFile: 'mta.yaml'
-    uploadFile: 'BusinessPartnerValidation_1.0.0.mtar'
+    uploadFile: 'cloud-sf-extension-cap-sample_1.0.0.mtar'
     artifactType: 'mta'
   mtaBuild:
     mtaBuildTool: "cloudMbt"
