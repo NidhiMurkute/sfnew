@@ -74,7 +74,7 @@ stages:
         space: 'Dev'
         appName: 'cloud-sf-extension-cap-sample'
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-        credentialsId: 'C5287080' 
+        credentialsId: 'globalnidhi' 
         
    #tmsUpload:
     #  - nodeName: 'devNode'
