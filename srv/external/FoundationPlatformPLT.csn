@@ -1,0 +1,2720 @@
+{
+  "definitions": {
+    "FoundationPlatformPLT": {
+      "kind": "service"
+    },
+    "FoundationPlatformPLT.SEFEventEntityKey": {
+      "kind": "type",
+      "elements": {
+        "description": {
+          "type": "cds.LargeString"
+        },
+        "descriptionMessageKey": {
+          "type": "cds.LargeString"
+        },
+        "name": {
+          "type": "cds.LargeString"
+        },
+        "type": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.SEFEventEntityParam": {
+      "kind": "type",
+      "elements": {
+        "description": {
+          "type": "cds.LargeString"
+        },
+        "descriptionMessageKey": {
+          "type": "cds.LargeString"
+        },
+        "hasValueAlways": {
+          "type": "cds.Boolean"
+        },
+        "name": {
+          "type": "cds.LargeString"
+        },
+        "type": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.SEFExtEventMetaData": {
+      "kind": "type",
+      "elements": {
+        "description": {
+          "type": "cds.LargeString"
+        },
+        "effectiveDated": {
+          "type": "cds.Boolean"
+        },
+        "entity": {
+          "type": "cds.LargeString"
+        },
+        "entityKeys": {
+          "type": "FoundationPlatformPLT.SEFEventEntityKey"
+        },
+        "name": {
+          "type": "cds.LargeString"
+        },
+        "params": {
+          "type": "FoundationPlatformPLT.SEFEventEntityParam"
+        },
+        "publisher": {
+          "type": "cds.LargeString"
+        },
+        "topic": {
+          "type": "cds.LargeString"
+        },
+        "type": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.SEFExtEventMetaDataList": {
+      "kind": "type",
+      "elements": {
+        "data": {
+          "type": "FoundationPlatformPLT.SEFExtEventMetaData"
+        },
+        "status": {
+          "type": "cds.LargeString"
+        },
+        "statusMsg": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.AccessibilityPreferences": {
+      "kind": "type",
+      "elements": {
+        "blindnessSupport": {
+          "type": "cds.Boolean"
+        },
+        "colorVisionType": {
+          "type": "cds.LargeString"
+        },
+        "keyboardOnlyNavigation": {
+          "type": "cds.Boolean"
+        },
+        "lowVisionType": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.COUserInfoElementBean": {
+      "kind": "type",
+      "elements": {
+        "id": {
+          "type": "cds.LargeString"
+        },
+        "label": {
+          "type": "cds.LargeString"
+        },
+        "type": {
+          "type": "cds.LargeString"
+        },
+        "value": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ToDoEntry": {
+      "kind": "type",
+      "elements": {
+        "completedDate": {
+          "type": "cds.Date"
+        },
+        "formDataId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.Integer"
+        },
+        "statusLabel": {
+          "type": "cds.LargeString"
+        },
+        "subjectFullName": {
+          "type": "cds.LargeString"
+        },
+        "subjectId": {
+          "type": "cds.LargeString"
+        },
+        "url": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ToDoBean": {
+      "kind": "type",
+      "elements": {
+        "categoryId": {
+          "type": "cds.LargeString"
+        },
+        "completedDate": {
+          "type": "cds.Date"
+        },
+        "dueDate": {
+          "type": "cds.Date"
+        },
+        "dueDateOffSet": {
+          "type": "cds.Integer"
+        },
+        "entries": {
+          "type": "FoundationPlatformPLT.ToDoEntry"
+        },
+        "entryId": {
+          "type": "cds.Integer"
+        },
+        "name": {
+          "type": "cds.LargeString"
+        },
+        "status": {
+          "type": "cds.Integer"
+        },
+        "statusLabel": {
+          "type": "cds.LargeString"
+        },
+        "stepDescAlt": {
+          "type": "cds.LargeString"
+        },
+        "todoItemId": {
+          "type": "cds.LargeString"
+        },
+        "url": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExternalUser": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "userId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "defaultLocale": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "is_deleted": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "loginMethod": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "password": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "personGUID": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "personId": {
+          "type": "cds.DecimalFloat"
+        },
+        "personIdExternal": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "productName": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "timeZone": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "userName": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "extAddressInfo": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExtAddressInfo",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "extEmailInfo": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExtEmailInfo",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "extPersonalInfo": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExtPersonalInfo"
+        },
+        "extPhoneInfo": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExtPhoneInfo",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "FoundationPlatformPLT.PicklistOption": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "externalCode": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "maxValue": {
+          "type": "cds.Double"
+        },
+        "minValue": {
+          "type": "cds.Double"
+        },
+        "optionValue": {
+          "type": "cds.Double"
+        },
+        "sortOrder": {
+          "type": "cds.Integer"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 9
+        },
+        "childPicklistOptions": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "parentPicklistOption": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        },
+        "picklist": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.Picklist"
+        },
+        "picklistLabels": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistLabel",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "FoundationPlatformPLT.Attachment": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "attachmentId": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "createdDate": {
+          "type": "cds.Timestamp"
+        },
+        "deletable": {
+          "type": "cds.Boolean"
+        },
+        "deprecable": {
+          "type": "cds.Boolean"
+        },
+        "description": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "documentCategory": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "documentEntityId": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "documentEntityType": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "documentType": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "externalId": {
+          "type": "cds.Integer64"
+        },
+        "fileContent": {
+          "type": "cds.LargeBinary"
+        },
+        "fileExtension": {
+          "type": "cds.String",
+          "length": 5
+        },
+        "fileName": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "fileSize": {
+          "type": "cds.Integer"
+        },
+        "imageConvertInProgress": {
+          "type": "cds.Boolean"
+        },
+        "lastAccessed": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mimeType": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "module": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "moduleCategory": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "ownerId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "ownerIdType": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "piiFlag": {
+          "type": "cds.Integer"
+        },
+        "searchable": {
+          "type": "cds.Boolean"
+        },
+        "softDelete": {
+          "type": "cds.Boolean"
+        },
+        "userId": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "viewable": {
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "FoundationPlatformPLT.PickListValueV2": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "PickListV2_effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "PickListV2_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lValue": {
+          "type": "cds.Integer64"
+        },
+        "label_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "label_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "legacyStatus": {
+          "type": "cds.Integer64"
+        },
+        "maxVal": {
+          "type": "cds.DecimalFloat"
+        },
+        "mdfSystemEffectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEffectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "minVal": {
+          "type": "cds.DecimalFloat"
+        },
+        "nonUniqueExternalCode": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "optValue": {
+          "type": "cds.DecimalFloat"
+        },
+        "optionId": {
+          "type": "cds.Integer64"
+        },
+        "parentPickListValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "rValue": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "parentPickListValueNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PickListValueV2",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExternalLearnerPersonalInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "itemId": {
+          "key": true,
+          "type": "cds.DecimalFloat"
+        },
+        "attachmentId": {
+          "type": "cds.LargeString"
+        },
+        "birthName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "businessFirstName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "businessLastName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "certificateEndDate": {
+          "type": "cds.Date"
+        },
+        "certificateStartDate": {
+          "type": "cds.Date"
+        },
+        "challengeStatus": {
+          "type": "cds.Boolean"
+        },
+        "countryOfBirth": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "dateOfBirth": {
+          "type": "cds.Date"
+        },
+        "dateOfDeath": {
+          "type": "cds.Date"
+        },
+        "displayName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "displayNameAlt1": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "displayNameAlt2": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "firstName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "firstNameAlt1": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "firstNameAlt2": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "formalName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "formalNameAlt1": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "formalNameAlt2": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "gender": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "initials": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "isOverridden": {
+          "type": "cds.Boolean"
+        },
+        "is_deleted": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastNameAlt1": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastNameAlt2": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "maritalStatus": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "middleName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "middleNameAlt1": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "middleNameAlt2": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "namePrefix": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "nationality": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "nativePreferredLang": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "preferredName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "salutation": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "script": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "secondLastName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "secondNationality": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "secondTitle": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "since": {
+          "type": "cds.Date"
+        },
+        "suffix": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "thirdNationality": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "title": {
+          "type": "cds.String",
+          "length": 128
+        }
+      }
+    },
+    "FoundationPlatformPLT.PickListV2": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "displayOrder": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "legacyPickListId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "parentPickList": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "picklistCreationSource": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "parentPickListNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PickListV2"
+        },
+        "values": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PickListValueV2",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "FoundationPlatformPLT.CompanyProvisioner": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.LargeString"
+        },
+        "createdAdminAccountNumber": {
+          "type": "cds.Integer"
+        },
+        "email": {
+          "type": "cds.LargeString"
+        },
+        "name": {
+          "type": "cds.LargeString"
+        },
+        "status": {
+          "type": "cds.LargeString"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExtAddressInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "addressId": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "address1": {
+          "type": "cds.String",
+          "length": 1536
+        },
+        "address2": {
+          "type": "cds.String",
+          "length": 1536
+        },
+        "addressType": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "city": {
+          "type": "cds.String",
+          "length": 1536
+        },
+        "country": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "province": {
+          "type": "cds.String",
+          "length": 1536
+        },
+        "state": {
+          "type": "cds.String",
+          "length": 1536
+        },
+        "zipCode": {
+          "type": "cds.String",
+          "length": 1536
+        },
+        "addressTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    },
+    "FoundationPlatformPLT.CurrencyConversion": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "baseCurrency": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "conversionRate": {
+          "type": "cds.DecimalFloat"
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "exchangeRateType": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalName_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemCreatedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemCreatedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemLastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "toCurrency": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "baseCurrencyNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.Currency"
+        },
+        "exchangeRateTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PickListValueV2"
+        },
+        "toCurrencyNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.Currency"
+        }
+      }
+    },
+    "FoundationPlatformPLT.InitiativeAlignmentBean": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "goalId": {
+          "type": "cds.Integer64"
+        },
+        "goalName": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "goalType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "initiativeGroupBeanRowId": {
+          "type": "cds.Integer64"
+        },
+        "initiativeId": {
+          "type": "cds.Integer64"
+        },
+        "initiativeName": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEffectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEffectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "FoundationPlatformPLT.PicklistLabel": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "locale": {
+          "key": true,
+          "type": "cds.String",
+          "length": 32
+        },
+        "optionId": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "id": {
+          "type": "cds.Integer64"
+        },
+        "label": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "picklistOption": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    },
+    "FoundationPlatformPLT.Country": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "currency": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "externalName_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "isDRMEnabled": {
+          "type": "cds.Boolean"
+        },
+        "isSetByMigrate": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemCreatedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemCreatedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemLastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "numericCountryCode": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "territoryId": {
+          "type": "cds.Integer64"
+        },
+        "twoCharCountryCode": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "currencyNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.Currency"
+        }
+      }
+    },
+    "FoundationPlatformPLT.Photo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "photoType": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "userId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "height": {
+          "type": "cds.Integer"
+        },
+        "lastModified": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mimeType": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "photo": {
+          "type": "cds.LargeBinary"
+        },
+        "photoId": {
+          "type": "cds.Integer64"
+        },
+        "photoName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "width": {
+          "type": "cds.Integer"
+        }
+      }
+    },
+    "FoundationPlatformPLT.WorkOrder": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "userSysId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "billingAmount": {
+          "type": "cds.DecimalFloat"
+        },
+        "billingRate": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "currency": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "endDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "startDate": {
+          "type": "cds.Date"
+        },
+        "vendor": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "workOrderId": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "workOrderName": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "workOrderOwnerId": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "workerType": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "currencyNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.Currency"
+        },
+        "vendorNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.VendorInfo"
+        },
+        "workerTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PickListValueV2"
+        }
+      }
+    },
+    "FoundationPlatformPLT.CompetencyRating": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "id": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "formContentId": {
+          "type": "cds.Integer64"
+        },
+        "formDataId": {
+          "type": "cds.Integer64"
+        },
+        "guid": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastModified": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "module": {
+          "type": "cds.Integer"
+        },
+        "rater": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "raterCategory": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "rating": {
+          "type": "cds.Double"
+        },
+        "scaleMax": {
+          "type": "cds.Integer64"
+        },
+        "scaleMin": {
+          "type": "cds.Integer64"
+        },
+        "source": {
+          "type": "cds.Integer"
+        },
+        "status": {
+          "type": "cds.Integer64"
+        },
+        "type": {
+          "type": "cds.Integer"
+        },
+        "userId": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "validFrom": {
+          "type": "cds.Date"
+        },
+        "validTo": {
+          "type": "cds.Date"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExtEmailInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "emailInfoId": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "emailAddress": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "emailType": {
+          "type": "cds.String",
+          "length": 38
+        },
+        "isPrimary": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "emailTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    },
+    "FoundationPlatformPLT.VendorInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "vendorCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "description_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "description_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "effectiveStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemCreatedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemCreatedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEffectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemLastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "vendorName": {
+          "type": "cds.String",
+          "length": 128
+        }
+      }
+    },
+    "FoundationPlatformPLT.Picklist": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "picklistId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 64
+        },
+        "picklistOptions": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExtPersonalInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "personalInfoId": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "firstName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "middleName": {
+          "type": "cds.String",
+          "length": 128
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExternalLearnerEmailInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "itemId": {
+          "key": true,
+          "type": "cds.DecimalFloat"
+        },
+        "emailAddress": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "emailType": {
+          "type": "cds.String",
+          "length": 38
+        },
+        "isPrimary": {
+          "type": "cds.Boolean"
+        },
+        "is_deleted": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "emailTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExternalLearnerAddressInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "itemId": {
+          "key": true,
+          "type": "cds.DecimalFloat"
+        },
+        "address10Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address10Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address11Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address11Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address12Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address12Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address13Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address13Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address14Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address14Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address15Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address15Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address16Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address16Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address17Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address17Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address18Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address18Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address19Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address19Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address1Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address1Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address20Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address20Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address2Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address2Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address3Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address3Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address4Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address4Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address5Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address5Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address6Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address6Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address7Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address7Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address8Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address8Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address9Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "address9Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "addressType": {
+          "type": "cds.String",
+          "length": 30
+        },
+        "cityAlt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "cityAlt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "countyAlt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "countyAlt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "customDate1Alt1": {
+          "type": "cds.Date"
+        },
+        "customDate1Alt2": {
+          "type": "cds.Date"
+        },
+        "customDouble1Alt1": {
+          "type": "cds.LargeString"
+        },
+        "customDouble1Alt2": {
+          "type": "cds.LargeString"
+        },
+        "customLong1Alt1": {
+          "type": "cds.DecimalFloat"
+        },
+        "customLong1Alt2": {
+          "type": "cds.DecimalFloat"
+        },
+        "customString1Alt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "customString1Alt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "empUsersSysId": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "is_deleted": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "provinceAlt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "provinceAlt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "script": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "scriptAlt1": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "scriptAlt2": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "stateAlt1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "stateAlt2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "addressTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExternalLearnerPhoneInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "itemId": {
+          "key": true,
+          "type": "cds.DecimalFloat"
+        },
+        "areaCode": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "countryCode": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "extension": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "isPrimary": {
+          "type": "cds.Boolean"
+        },
+        "is_deleted": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "phoneNumber": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "phoneType": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "phoneTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    },
+    "FoundationPlatformPLT.TimeZone": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "comment": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "country": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemCreatedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemCreatedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEffectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemLastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "supported": {
+          "type": "cds.Boolean"
+        },
+        "utcDstOffset": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "utcOffset": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "countryNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.Country"
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExternalLearner": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "userId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "defaultLocale": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "is_deleted": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "loginMethod": {
+          "type": "cds.String",
+          "length": 8
+        },
+        "password": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "personGUID": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "personId": {
+          "type": "cds.DecimalFloat"
+        },
+        "personIdExternal": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "productName": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "sourceChannel": {
+          "type": "cds.String",
+          "length": 90
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "timeZone": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "userName": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "emailInfo": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExternalLearnerEmailInfo",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "homeAddress": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExternalLearnerAddressInfo",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "personalInfo": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExternalLearnerPersonalInfo"
+        },
+        "phoneInfo": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.ExternalLearnerPhoneInfo",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "sourceChannelNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    },
+    "FoundationPlatformPLT.Currency": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "code": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "effectiveStartDate": {
+          "key": true,
+          "type": "cds.Date"
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "defaultDecimals": {
+          "type": "cds.Integer64"
+        },
+        "description_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "description_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "externalName_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "externalName_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemCreatedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemCreatedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemLastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "symbol": {
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "FoundationPlatformPLT.TeamGoalOwner": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemCreatedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemCreatedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEffectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEffectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemLastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "mdfSystemLastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemTransactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "objId": {
+          "type": "cds.Integer64"
+        },
+        "ownerType": {
+          "type": "cds.Integer64"
+        },
+        "userId": {
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "FoundationPlatformPLT.ExtPhoneInfo": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "phoneInfoId": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "areaCode": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "countryCode": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "extension": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "isPrimary": {
+          "type": "cds.String",
+          "length": 4
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "phoneNumber": {
+          "type": "cds.String",
+          "length": 600
+        },
+        "phoneType": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "phoneTypeNav": {
+          "type": "cds.Association",
+          "target": "FoundationPlatformPLT.PicklistOption"
+        }
+      }
+    }
+  }
+}

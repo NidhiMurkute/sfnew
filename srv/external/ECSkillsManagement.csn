@@ -1,0 +1,6094 @@
+{
+  "definitions": {
+    "ECSkillsManagement": {
+      "kind": "service"
+    },
+    "ECSkillsManagement.CertificationContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CertificationEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.FamilyEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "createdLocale": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "competencies": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.FamilyCompetencyMappingEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "skills": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.FamilySkillMappingEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "ECSkillsManagement.CertificationEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "certification_de_DE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_defaultValue": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_en_GB": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_en_US": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_es_ES": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_fr_FR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_ja_JP": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_ko_KR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_localized": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_nl_NL": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_pt_BR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_pt_PT": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_ru_RU": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_zh_CN": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "certification_zh_TW": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "description_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.JobResponsibilityContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobResponsibilityEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.InterviewQuestionContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.InterviewQuestionEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.JobResponsibilityEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "description_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "duty_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "libName_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.RatedSkillMapping": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "SkillProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "expectedLevel_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "expectedLevel_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "managerRatedLevel_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "managerRatedLevel_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "selfRatedLevel_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "selfRatedLevel_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "skill": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "skillNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.SkillEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.RoleEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "createdLocale": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "family": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "familyNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.FamilyEntity"
+        },
+        "jobCodeMappings": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobCodeMappingEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "roleCompetencyMappings": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RoleCompetencyMappingEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "roleSkillMappings": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RoleSkillMappingEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "roleTalentPoolMappings": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RoleTalentPoolMappingEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "ECSkillsManagement.JobProfileLocalizedData": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "desc_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "desc_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.JobCodeMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RoleEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "jobCode": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "type": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "usage": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.CompetencyType": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "GUID": {
+          "key": true,
+          "type": "cds.Integer64"
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        }
+      }
+    },
+    "ECSkillsManagement.EmploymentConditionContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.EmploymentConditionEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.FamilyCompetencyMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "FamilyEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "competency": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "competencyNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CompetencyEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.PhysicalReqEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "description_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "requirement_de_DE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_defaultValue": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_en_GB": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_en_US": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_es_ES": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_fr_FR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_ja_JP": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_ko_KR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_localized": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_nl_NL": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_pt_BR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_pt_PT": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_ru_RU": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_zh_CN": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "requirement_zh_TW": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.InterviewQuestionEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "question_de_DE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_defaultValue": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_en_GB": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_en_US": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_es_ES": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_fr_FR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_ja_JP": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_ko_KR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_localized": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_nl_NL": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_pt_BR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_pt_PT": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_ru_RU": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_zh_CN": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "question_zh_TW": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "type_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "type_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        }
+      }
+    },
+    "ECSkillsManagement.JDTemplateFamilyMapping": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobDescTemplate_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "family": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "familyNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.FamilyEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.BehaviorMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "CompetencyEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "behaviorName_de_DE": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_defaultValue": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_en_GB": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_en_US": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_es_ES": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_fr_FR": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_ja_JP": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_ko_KR": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_localized": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_nl_NL": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_pt_BR": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_pt_PT": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_ru_RU": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_zh_CN": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "behaviorName_zh_TW": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "description_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.SkillEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "definition_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "definition_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "group_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "group_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "libName_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "libName_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "proLevel1_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel1_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel2_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel3_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel4_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "proLevel5_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.PhysicalReqContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.PhysicalReqEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.SkillContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "proLevel_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "role": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "skillMappingId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.SkillEntity"
+        },
+        "roleNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RoleEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.RoleCompetencyMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RoleEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "competency": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "rating_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "rating_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "weight_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "weight_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "competencyNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CompetencyEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.SelfReportSkillMapping": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "SkillProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "skill": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "skillNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.SkillEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.JobProfile": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "compData_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "compData_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "draft": {
+          "type": "cds.Boolean"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "footer_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "footer_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "header_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifierName": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "longDesc_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "longDesc_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "migrated": {
+          "type": "cds.Boolean"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "position": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "role": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "shortDesc_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "shortDesc_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "template": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "certificationContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CertificationContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "compDatas": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobProfileLocalizedData",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "competencyContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CompetencyContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "employmentConditionContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.EmploymentConditionContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "footers": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobProfileLocalizedData",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "headers": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobProfileLocalizedData",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "interviewQuestionContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.InterviewQuestionContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "jobResponsibilityContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobResponsibilityContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "longDesciptions": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobProfileLocalizedData",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "physicalReqContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.PhysicalReqContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "relevantIndustryContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RelevantIndustryContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "roleNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RoleEntity"
+        },
+        "shortDesciptions": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobProfileLocalizedData",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "skillContents": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.SkillContent",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "templateNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobDescTemplate"
+        }
+      }
+    },
+    "ECSkillsManagement.FamilySkillMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "FamilyEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "proLevel_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "skill": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "skillNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.SkillEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.RoleSkillMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RoleEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "proLevel_de_DE": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_defaultValue": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_en_GB": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_en_US": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_es_ES": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_fr_FR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ja_JP": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ko_KR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_localized": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_nl_NL": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_pt_BR": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_pt_PT": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_ru_RU": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_zh_CN": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "proLevel_zh_TW": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "skill": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "skillNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.SkillEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.JobDescTemplate": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "footer_de_DE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_defaultValue": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_en_GB": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_en_US": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_es_ES": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_fr_FR": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_ja_JP": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_ko_KR": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_localized": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_nl_NL": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_pt_BR": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_pt_PT": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_ru_RU": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_zh_CN": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "footer_zh_TW": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_de_DE": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_defaultValue": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_en_GB": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_en_US": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_es_ES": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_fr_FR": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_ja_JP": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_ko_KR": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_localized": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_nl_NL": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_pt_BR": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_pt_PT": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_ru_RU": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_zh_CN": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "header_zh_TW": {
+          "type": "cds.String",
+          "length": 50
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "title_de_DE": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_defaultValue": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_en_GB": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_en_US": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_es_ES": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_fr_FR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_ja_JP": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_ko_KR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_localized": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_nl_NL": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_pt_BR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_pt_PT": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_ru_RU": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_zh_CN": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "title_zh_TW": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "jdFamilyMappings": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JDTemplateFamilyMapping",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "sections": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.JobDescSection",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "ECSkillsManagement.SkillProfile": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "ratedSkills": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RatedSkillMapping",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "selfReportSkills": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.SelfReportSkillMapping",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "ECSkillsManagement.CompetencyEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_de_DE": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_defaultValue": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_en_GB": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_en_US": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_es_ES": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_fr_FR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ja_JP": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ko_KR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_localized": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_nl_NL": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_pt_BR": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_pt_PT": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_ru_RU": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_zh_CN": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "category_zh_TW": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "collection": {
+          "type": "cds.Boolean"
+        },
+        "core": {
+          "type": "cds.Boolean"
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "description_de_DE": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_defaultValue": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_GB": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_en_US": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_es_ES": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_fr_FR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ja_JP": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ko_KR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_localized": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_nl_NL": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_BR": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_pt_PT": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_ru_RU": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_CN": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "description_zh_TW": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "libName_de_DE": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_defaultValue": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_en_GB": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_en_US": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_es_ES": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_fr_FR": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_ja_JP": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_ko_KR": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_localized": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_nl_NL": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_pt_BR": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_pt_PT": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_ru_RU": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_zh_CN": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "libName_zh_TW": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 2048
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "behaviors": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.BehaviorMappingEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "competencies": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CompetencyEntity",
+          "cardinality": {
+            "max": "*"
+          }
+        },
+        "competencyTypes": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CompetencyType",
+          "cardinality": {
+            "max": "*"
+          }
+        }
+      }
+    },
+    "ECSkillsManagement.CompetencyContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "competencyMappingId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "role": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.CompetencyEntity"
+        },
+        "roleNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RoleEntity"
+        }
+      }
+    },
+    "ECSkillsManagement.RelevantIndustryEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "industry_de_DE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_defaultValue": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_en_GB": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_en_US": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_es_ES": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_fr_FR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_ja_JP": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_ko_KR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_localized": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_nl_NL": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_pt_BR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_pt_PT": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_ru_RU": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_zh_CN": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "industry_zh_TW": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.RoleTalentPoolMappingEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "RoleEntity_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "description": {
+          "type": "cds.String",
+          "length": 4000
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "mdfTalentPool": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "name": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "talentPoolId": {
+          "type": "cds.Integer64"
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.EmploymentConditionEntity": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "condition_de_DE": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_defaultValue": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_en_GB": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_en_US": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_es_ES": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_fr_FR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_ja_JP": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_ko_KR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_localized": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_nl_NL": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_pt_BR": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_pt_PT": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_ru_RU": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_zh_CN": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "condition_zh_TW": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        }
+      }
+    },
+    "ECSkillsManagement.JobDescSection": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobDescTemplate_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "bold": {
+          "type": "cds.Boolean"
+        },
+        "boldHeader": {
+          "type": "cds.Boolean"
+        },
+        "bulletType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "contentType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "externalPosting": {
+          "type": "cds.Boolean"
+        },
+        "fontSizeHeader": {
+          "type": "cds.Integer64"
+        },
+        "internalPosting": {
+          "type": "cds.Boolean"
+        },
+        "italic": {
+          "type": "cds.Boolean"
+        },
+        "italicHeader": {
+          "type": "cds.Boolean"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "multiContents": {
+          "type": "cds.Boolean"
+        },
+        "name_de_DE": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_defaultValue": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_en_GB": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_en_US": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_es_ES": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_fr_FR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_ja_JP": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_ko_KR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_localized": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_nl_NL": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_pt_BR": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_pt_PT": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_ru_RU": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_zh_CN": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "name_zh_TW": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "onlyAdmin": {
+          "type": "cds.Boolean"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "removable": {
+          "type": "cds.Boolean"
+        },
+        "required": {
+          "type": "cds.Boolean"
+        },
+        "showInJobReq": {
+          "type": "cds.Boolean"
+        },
+        "smallIcon": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "underline": {
+          "type": "cds.Boolean"
+        },
+        "underlineHeader": {
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "ECSkillsManagement.RelevantIndustryContent": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "JobProfile_externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "externalCode": {
+          "key": true,
+          "type": "cds.String",
+          "length": 128
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "createdDate": {
+          "type": "cds.Date"
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "effectiveEndDate": {
+          "type": "cds.Date"
+        },
+        "effectiveStartDate": {
+          "type": "cds.Date"
+        },
+        "entity": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobProfileId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "lastModifiedDate": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedDateWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mdfSystemEntityId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemObjectType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemRecordStatus": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "mdfSystemVersionId": {
+          "type": "cds.Integer64"
+        },
+        "order": {
+          "type": "cds.Integer64"
+        },
+        "sectionId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "sectionType": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "subModule": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "transactionSequence": {
+          "type": "cds.Integer64"
+        },
+        "entityNav": {
+          "type": "cds.Association",
+          "target": "ECSkillsManagement.RelevantIndustryEntity"
+        }
+      }
+    }
+  }
+}
