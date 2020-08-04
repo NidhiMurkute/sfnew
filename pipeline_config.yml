@@ -31,9 +31,7 @@ unsafeMode: false
 
 ### Step-specific configuration
 steps:
-  mavenExecute:
-    dockerImage: devxci/mbtci:1.0.4
-   artifactSetVersion:
+  artifactSetVersion:
     commitVersion: false
     timestampTemplate: '%Y%m%d%H%M%S'
   executeNpm:
@@ -51,10 +49,6 @@ steps:
     artifactType: 'mta'
   mtaBuild:
     mtaBuildTool: "cloudMbt"
-  
-
-
-### Stage-specific configuration
 stages:
   npmAudit:
     auditedAdvisories:
@@ -71,13 +65,14 @@ stages:
     # moderate
       - 535
       - 1300
-
- lint:
+ 
+  lint:
     ui5BestPractices:
       failThreshold:
         error: 100
         warning: 500
         info: 1000
+
 
 productionDeployment:
     cfTargets:
